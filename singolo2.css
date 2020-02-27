@@ -184,6 +184,9 @@ li{
      margin-left: 1px;
      margin-right: 3px;
 }
+li:hover{
+     cursor: pointer;
+}
 .young__girl{
      margin-right: 39px;
 }
