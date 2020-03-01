@@ -152,7 +152,7 @@
      margin-left: 40px;
      margin-top: 47px;
 }
-.women__name, .men__name, .young__name{
+.woman__name, .man__name, .young__name{
      width: 137px;
      height: 14px;
      color: #666d89;
@@ -163,7 +163,7 @@
      margin-top: 13px;
      letter-spacing: -0.2px;
 }
-.women__text, .men__text, .young__text{
+.woman__text, .man__text, .young__text{
      width: 301px;
      height: 32px;
      color: #767e9e;
@@ -174,7 +174,7 @@
      margin-top: 14px;
      text-align: justify;
 }
-.women__text{
+.woman__text{
      letter-spacing: -0.059px;
 }
 li{
@@ -190,7 +190,7 @@ li:hover{
 .young__girl{
      margin-right: 39px;
 }
-.men{margin-right: 2px;}
+.man{margin-right: 2px;}
 .young__contact{
      margin-left: -1px;
 }
