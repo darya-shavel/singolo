@@ -102,16 +102,16 @@
     letter-spacing: 0.09px;
 }
 .contact-inf__location::before{
-    content: url(./location.png);
+    content: url(./assets/images/location.png);
     margin-right: 12px;
 }
 
 .contact-inf__telephone::before{
-    content: url(./phone.png);
+    content: url(./assets/images/contact-phone.png);
     margin: 0 11px 1px 1px;
 }
 .contact-inf__mail::before{
-    content: url(./mail.png);
+    content: url(./assets/images/mail.png);
     margin-right: 9px;
 }
 .contact__form{
@@ -129,7 +129,7 @@
     margin-bottom: 16px;
     padding-left: 15px;
     box-sizing: border-box;
-    
+
 }
 .forms__textarea{
     width: 619px;
