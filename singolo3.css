@@ -102,16 +102,16 @@
     letter-spacing: 0.09px;
 }
 .contact-inf__location::before{
-    content: url(./assets/images/location.png);
+    content: url(location.png);
     margin-right: 12px;
 }
 
 .contact-inf__telephone::before{
-    content: url(./assets/images/contact-phone.png);
+    content: url(contact-phone.png);
     margin: 0 11px 1px 1px;
 }
 .contact-inf__mail::before{
-    content: url(./assets/images/mail.png);
+    content: url(mail.png);
     margin-right: 9px;
 }
 .contact__form{
