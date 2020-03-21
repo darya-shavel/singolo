@@ -31,10 +31,13 @@
     width: 1020px;
 }
 .header{
+    position: fixed;
+    z-index: 50;
     display: flex;
-    height: 89px;
     align-items: center;
-    justify-content: space-between;
+    height: 89px;
+    width: 1020px;
+    justify-content: flex-end;
     background-color: #2d303a;
     box-shadow: 0px 6px 0px 0px #323746;
     -webkit-box-shadow: 0px 6px 0px 0px #323746;
@@ -43,11 +46,11 @@
 .header__logotype{
     width: 115px;
     font-size: 25px;
+    margin-right: 426px;
     line-height: 6px;
     color: #ffffff;
     font-family: "Lato-Bold", sans-serif;
     font-weight: 700;
-    padding-left: 39px;
     letter-spacing: -0.35px;
     text-align: justify;
     text-transform: uppercase;
@@ -61,7 +64,6 @@
     margin-right: 40px;
 }
 .navigation__item{
-    display: flex;
     justify-content: flex-end;
     margin-top: 8px;
     letter-spacing: -0.08px;
@@ -87,36 +89,28 @@
     color: #f06c64;
     text-decoration: none;
 }
-.photo-block{
+.active {
+    color: #f06c64;
+}
+.slider{
+    margin-bottom: 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: relative;
-    margin-top: 6px;
-    height: 585px;
+    height: 631px;
     background-color: #f06c64;
     box-shadow: 0px 15px 0px 0px #ea676b;
     -webkit-box-shadow: 0px 15px 0px 0px #ea676b;
     -moz-box-shadow: 0px 15px 0px 0px #ea676b;
-}
-.slider__arrow1{
-    display: block;
-    width: 16px;
-    height: 27px;
-    margin-left: 42px;
-    margin-top: 4px;
-}
-.slider__arrow1:hover{
-    cursor: pointer;
-    width: 26px;
-    height: 37px;
 }
 .vertical__phone{
     position: absolute;
     width: 240px;
     height: 483px;
     left: 112px;
-    top: 53px;
+    top: 118px;
+    z-index: 0;
 }
 .horizontal__phone{
     position: absolute;
@@ -124,16 +118,79 @@
     width: 484px;
     height: 240px;
     left: 425px;
-    top: 174px;
+    top: 229px;
 }
-.slider__arrow2{
-    margin-top: 4px;
-    margin-right: 40px;
-}
-.slider__arrow2:hover{
+.button__phone1{
     cursor: pointer;
-    width: 26px;
-    height: 37px;
+    position: absolute;
+    width: 47px;
+    height: 50px;
+    left: 193px;
+    top: 522px;
+    z-index: 1;
+}
+.button__phone2{
+    cursor: pointer;
+    position: absolute;
+    width: 47px;
+    height: 50px;
+    left: 431px;
+    top: 312px;
+    z-index: 1;
+}
+.vertical__black{
+    position: absolute;
+    left: 126px;
+    top: 183px;
+    display: none;
+    z-index: 1;
+    background: black;
+    width: 188px;
+    height: 333px;
+}
+.horizontal__black{
+    position: absolute;
+    left: 485px;
+    top: 243px;
+    display: none;
+    z-index: 1;
+    background: black;
+    width: 333px;
+    height: 188px;
+}
+.slider2{
+    height: 105%;
+    width: 100%;
+    background-color: #648bf0;
+}
+.slider2__img{
+    position: absolute;
+    left: 275px;
+    top: 136px;
+    width: 46%;
+    height: 74%;
+}
+.slider .prev, .slider .next {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+}
+.slider .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+.slider .prev:hover,
+.slider .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
 }
 .text__service{
     margin-top: 15px;
@@ -305,11 +362,16 @@
 .button__navigation{
     margin-bottom: 19px;
 }
-.button__navigation :hover{
+.button:hover{
     cursor: pointer; 
     border: 1px solid #c5c5c5;
     border-radius: 5px;
     color: #dedede;
+}
+.button__active{
+    border: 1px solid #c5c5c5 !important;
+    border-radius: 5px !important;
+    color: #dedede !important;
 }
 .button__web{
     width: 78px;
@@ -349,18 +411,18 @@
     line-height: 21.56px;
     color: #767e9e;
 }
+
+.portfolio__border{
+    border: 5px solid #F06C64;
+}
+.selected {
+    cursor: pointer;
+}
 .column__img{
-    display: flex;
-    flex-wrap: wrap;
-    list-style: none;
-    justify-content: space-between;
-    width: 940px;
-}
-.column__img li:nth-child(1n+13){
-    display: none;
-}
-.boat, .animals, .girl, .sdk, .town, .little_robots, .robot, .birds{
-    margin-bottom: 16px;
+    display: grid;
+    grid-template: repeat( 3 , 187px)/repeat(4 , 220px);
+    grid-gap: 20px;
+    top: -0.5px;
 }
 .about{
     margin-top: 5px;

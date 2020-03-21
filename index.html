@@ -9,25 +9,35 @@
 <body>
     <div class="wrapper">
         <header class="header">
-            <h1 class="header__logotype">Singolo</h1>
+            <h1 class="header__logotype">Singolo</h1> 
             <nav class="header__navigation">
                 <ul class="navigation">
                     <li class="navigation__item"><a class="navigation__link" href="#">Home</a></li>
-                    <li class="navigation__item"><a class="navigation__link"href="#">Services</a></li>
-                    <li class="navigation__item"><a class="navigation__link"href="#">Portfolio</a></li>
-                    <li class="navigation__item"><a class="navigation__link"href="#">About</a></li>
-                    <li class="navigation__item"><a class="navigation__link"href="#">Contact</a></li>
+                    <li class="navigation__item"><a class="navigation__link"href="#service">Services</a></li>
+                    <li class="navigation__item"><a class="navigation__link"href="#portfolio">Portfolio</a></li>
+                    <li class="navigation__item"><a class="navigation__link"href="#about">About</a></li>
+                    <li class="navigation__item"><a class="navigation__link"href="#contact">Contact</a></li>
                 </ul>
             </nav>
         </header>
         <main class="main">
-            <div class="photo-block">
-                    <img class="slider__arrow1" src="./assets/images/chev.png">
-                <img class="vertical__phone" src="./assets/images/vertical-phone.png">
-                <img src="./assets/images/horizontal-phone.png" class="horizontal__phone">
-                <img src="./assets/images/chev2.png" alt="arrow" class="slider__arrow2">
+            <div class="slider">
+                <div class="item">
+                    <div class="button__phone1"></div>
+                    <div class="vertical__black"></div>
+                    <div class="button__phone2"></div>
+                    <div class="horizontal__black"></div>
+                    <img class="vertical__phone" src="./assets/images/vertical-phone.png" alt="Первый слайд">
+                    <img class="horizontal__phone" src="./assets/images/horizontal-phone.png" alt="Первый слайд">
+                </div>
+            
+                <div class="item slider2" >
+                    <img class="slider2__img" src="./assets/images/slide2.png" alt="Второй слайд">
+                </div>
+                <a class="prev" onclick="minusSlide()"><img src="./assets/images/chev.png"></a>
+                <a class="next" onclick="plusSlide()"><img src="./assets/images/chev2.png"></a>
             </div>
-            <div class="text__service">
+            <div class="text__service" id="service">
                 <h1 class="our-service">Our Services</h1>
                 <p class="service__paragraph">
                     Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor 
@@ -114,7 +124,7 @@
                     </div>
                 </div>
             </div>
-            <div class="portfolio">
+            <div class="portfolio" id="portfolio">
                 <p id="portfolio__text">
                     Portfolio
                 </p>
@@ -127,22 +137,22 @@
                     <button class="button button__graphic">Graphic Design</button>
                     <button class="button button__artwork">Artwork</button>
                 </nav>
-                    <ul class="column__img">
-                      <li><img src="./assets/images/img1-boat.png" alt="boat" class="boat"></li>
-                      <li><img src="./assets/images/img2-girl.png" alt="girl" class="girl"></li>  
-                      <li><img src="./assets/images/img3-town.png" alt="town" class="town"></li> 
-                      <li><img src="./assets/images/img4-robot.png" alt="robot" class="robot"></li> 
-                       <li> <img src="./assets/images/img1-animals.png" alt="animals" class="animals"> </li>
-                       <li><img src="./assets/images/img2-sdk.png" alt="SDK" class="sdk"></li> 
-                       <li><img src="./assets/images/img3-littlerobots.png" alt="robots" class="little_robots"></li> 
-                       <li><img src="./assets/images/img4-birds.png" alt="birds" class="birds"></li>
-                       <li><img src="./assets/images/img1-monster.png" alt="monster" class="monster"></li>  
-                       <li><img src="./assets/images/img2-words.png" alt="words" class="words"></li> 
-                       <li><img src="./assets/images/img3-bloodm.png" alt="blood" class="blood_monster"></li> 
-                        <li><img src="./assets/images/img4-desk.png" alt="desk" class="desk"></li>
-                    </ul>
+                    <div class="column__img">
+                        <img src="./assets/images/img1-boat.png" alt="boat" class="portfolio_item boat">
+                        <img src="./assets/images/img2-girl.png" alt="girl" class="portfolio_item  girl">  
+                        <img src="./assets/images/img3-town.png" alt="town" class="portfolio_item  town"> 
+                        <img src="./assets/images/img4-robot.png" alt="robot" class="portfolio_item  robot"> 
+                        <img src="./assets/images/img1-animals.png" alt="animals" class="portfolio_item  animals"> 
+                        <img src="./assets/images/img2-sdk.png" alt="SDK" class="portfolio_item  sdk"> 
+                        <img src="./assets/images/img3-littlerobots.png" alt="robots" class="portfolio_item  little_robots"> 
+                        <img src="./assets/images/img4-birds.png" alt="birds" class="portfolio_item  birds">
+                        <img src="./assets/images/img1-monster.png" alt="monster" class="portfolio_item  monster">  
+                        <img src="./assets/images/img2-words.png" alt="words" class="portfolio_item  words"> 
+                        <img src="./assets/images/img3-bloodm.png" alt="blood" class="portfolio_item  blood_monster"> 
+                        <img src="./assets/images/img4-desk.png" alt="desk" class="portfolio_item  desk">
+                    </div>
             </div>
-            <div class="about">
+            <div class="about" id="about">
                 <p id="about_us">
                     About Us
                 </p>
@@ -216,14 +226,14 @@
                         <form action="#" method="post">
                             <input type="text" name="username" placeholder="Name (Required)" class="forms__items" required>
                             <input type="email" name="email-address" placeholder="Email (Required)" class="forms__items" required>
-                            <input type="tel" name="phone-number" placeholder="Subject" class="forms__items">
+                            <input type="tel" name="phone-number" placeholder="Subject" class="forms__items subject">
                             <textarea name="comment" class="forms__textarea" placeholder="Describe your project in detail..."></textarea>
                             <button class="submit">
                                 Submit
                             </button>
-                        </form>
+                        </form>  
                     </div>
-                    <div class="contact__information">
+                    <div class="contact__information" id="contact">
                         <p class="contact__topic">
                             Contact Information
                         </p>
@@ -235,7 +245,6 @@
                         <a href="mailto:  info@singolo.com" class="contact-inf__mail">  info@singolo.com</a>
                     </div>
                 </div>
-                
             </div>
             </main>
             <footer class="footer">
@@ -253,5 +262,6 @@
             </footer>
         </div>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
