@@ -684,7 +684,7 @@ textarea::placeholder{
     font-size: 12px;
     color: #666d89;
 }
-.message-block{
+.message-block {
     display: none;
     position: fixed;
     top: 0;

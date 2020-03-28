@@ -66,7 +66,6 @@ portfolioImagesBorder.addEventListener('click', (event)=>{
         portfolioImagesBorder.classList.remove('portfolio__border');
     }
 });
-
 //slider
 let slideIndex = 1;
 showSlides(slideIndex);
@@ -95,7 +94,6 @@ function showSlides(n) {
     }
     slides[slideIndex - 1].style.display = "block";
 }
-
 //form 
 const button = document.querySelector('.submit');
 const closeButton = document.getElementById('close-btn');
