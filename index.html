@@ -12,7 +12,7 @@
             <h1 class="header__logotype">Singolo</h1> 
             <nav class="header__navigation">
                 <ul class="navigation">
-                    <li class="navigation__item"><a class="navigation__link" href="#">Home</a></li>
+                    <li class="navigation__item"><a class="navigation__link" class="active__link" href="#home">Home</a></li>
                     <li class="navigation__item"><a class="navigation__link"href="#service">Services</a></li>
                     <li class="navigation__item"><a class="navigation__link"href="#portfolio">Portfolio</a></li>
                     <li class="navigation__item"><a class="navigation__link"href="#about">About</a></li>
@@ -21,7 +21,7 @@
             </nav>
         </header>
         <main class="main">
-            <div class="slider">
+            <div class="slider" id="home">
                 <div class="item">
                     <div class="button__phone1"></div>
                     <div class="vertical__black"></div>
@@ -49,10 +49,10 @@
                             <img src="./assets/images/pen.png" alt="pen">
                         </div>
                         <div class="design-text">
-                            <h2 id="custom-design-topic">
+                            <h2 class="custom-design-topic">
                                 Custom Design
                             </h2>
-                            <p id="custom-design-paragraph">
+                            <p class="custom-design-paragraph">
                                 Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam laoreet, viverra lacus ut, ultrices velit.
                             </p>
                         </div>
@@ -62,10 +62,10 @@
                             <img src="./assets/images/bulb.png" alt="bulb">
                         </div>
                         <div class="bulb__text">
-                            <h2 id="bulb-topic">
+                            <h2 class="bulb-topic">
                                 Inovative Ideas
                             </h2>
-                            <p id="bulb-paragraph">
+                            <p class="bulb-paragraph">
                                 Quisque luctus, quam eget molestie commodo, lacus purus cursus purus, nec rutrum tellus dolor id lorem.
                             </p>
                         </div>
@@ -75,10 +75,10 @@
                             <img src="./assets/images/heart.png" alt="heart">
                         </div>
                         <div class="answer__text">
-                            <h2 id="answer-topic">
+                            <h2 class="answer-topic">
                                 Love Is The Answer
                             </h2>
-                            <p id="answer-paragraph">
+                            <p class="answer-paragraph">
                                 Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis. Quisque condimentum.
                             </p>
                         </div>
@@ -88,10 +88,10 @@
                             <img src="./assets/images/phone.png" alt="phone">
                         </div>
                         <div class="responsive__text">
-                            <h2 id="responsive-topic">
+                            <h2 class="responsive-topic">
                                 Responsive Layout
                             </h2>
-                            <p id="responsive-paragraph"> 
+                            <p class="responsive-paragraph"> 
                                 Sed porttitor placerat rhoncus. In at nunc tellus. Maecenas blandit nunc ligula. Praesent elit leo.
                             </p>
                         </div>
@@ -101,10 +101,10 @@
                             <img src="./assets/images/bubble.png" alt="bubble">
                         </div>
                         <div class="support__text">
-                            <h2 id="support-topic">
+                            <h2 class="support-topic">
                                 24 / 7 Support
                             </h2>
-                            <p id="support-paragraph">
+                            <p class="support-paragraph">
                                 Vivamus vel quam lacinia, tincidunt dui non, vehicula nisi. Nulla a sem erat. Pellentesque egestas venenatis lorem .
                             </p>
                         </div>
@@ -114,10 +114,10 @@
                             <img src="./assets/images/stars.png" alt="stars">
                         </div>
                         <div class="star__text">
-                            <h2 id="star-topic"> 
+                            <h2 class="star-topic"> 
                                 Feel Like A Star
                             </h2>
-                            <p id="star-paragraph">
+                            <p class="star-paragraph">
                                 Quisque hendrerit purus dapibus, ornare nibh vitae, viverra nibh. Fusce vitae aliquam tellus.
                             </p>
                         </div>
@@ -125,10 +125,10 @@
                 </div>
             </div>
             <div class="portfolio" id="portfolio">
-                <p id="portfolio__text">
+                <p class="portfolio__text">
                     Portfolio
                 </p>
-                <p id="portfolio__paragraph">
+                <p class="portfolio__paragraph">
                     Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
                 </p>
                 <nav class="button__navigation">
@@ -153,7 +153,7 @@
                     </div>
             </div>
             <div class="about" id="about">
-                <p id="about_us">
+                <p class="about_us">
                     About Us
                 </p>
                 <p class="about__paragraph">
@@ -223,12 +223,12 @@
                 </p>
                 <div class="inputs__contact-inf">
                     <div class="contact__form">
-                        <form action="#" method="post">
-                            <input type="text" name="username" placeholder="Name (Required)" class="forms__items" required>
+                        <form action="#" method="post" class="form">
+                            <input type="text" name="username" placeholder="Name (Required)" class="forms__items" id="name" required>
                             <input type="email" name="email-address" placeholder="Email (Required)" class="forms__items" required>
-                            <input type="tel" name="phone-number" placeholder="Subject" class="forms__items subject">
-                            <textarea name="comment" class="forms__textarea" placeholder="Describe your project in detail..."></textarea>
-                            <button class="submit">
+                            <input type="tel" name="phone-number" placeholder="Subject" class="forms__items subject" id="subject">
+                            <textarea name="comment" class="forms__textarea" placeholder="Describe your project in detail..." id="description"></textarea>
+                            <button type="submit" class="submit" id="submit">
                                 Submit
                             </button>
                         </form>  
@@ -246,20 +246,33 @@
                     </div>
                 </div>
             </div>
-            </main>
-            <footer class="footer">
-                <p class="footer__copyright">
-                        © Copyright 2013
-                </p>
-                    <div class="footer__list">
-                        <ul>
-                           <li id="end__list"><a href="#"><img src="./assets/images/facebook.png" alt="facebook"></a></li>
-                           <li id="end__list"><a href="#"><img src="./assets/images/google.png" alt="google"></a></li>
-                           <li id="end__list"><a href="#"><img src="./assets/images/twitter.png" alt="twitter"></a></li>
-                           <li id="end__list"><a href="#"><img src="./assets/images/linkedin.png" alt="linkedin"></a></li>
-                       </ul>
-                    </div>
-            </footer>
+        </main>
+        <footer class="footer">
+            <p class="footer__copyright">
+                    © Copyright 2013
+            </p>
+                <div class="footer__list">
+                    <ul>
+                        <li class="end__list"><a href="#"><img src="./assets/images/facebook.png" alt="facebook"></a></li>
+                        <li class="end__list"><a href="#"><img src="./assets/images/google.png" alt="google"></a></li>
+                        <li class="end__list"><a href="#"><img src="./assets/images/twitter.png" alt="twitter"></a></li>
+                        <li class="end__list"><a href="#"><img src="./assets/images/linkedin.png" alt="linkedin"></a></li>
+                    </ul>
+                </div>
+        </footer>
+        <div class="message-block">
+            <div class="message">
+                <div class="message-body">
+                    <p>Письмо отправлено </p><br>
+                    <p>
+                        <span class="result"></span>
+                    </p>
+                    <p>
+                        <span id="result"></span>
+                    </p>
+                </div>
+                <button class="close-btn" id="close-btn">Ок</button>
+            </div>
         </div>
     </div>
     <script src="script.js"></script>
