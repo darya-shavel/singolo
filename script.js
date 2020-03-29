@@ -123,8 +123,10 @@ closeButton.addEventListener('click', function(){
 
 
 //hamburger
-
 const burger = document.querySelector('.hamburger');
+burger.addEventListener('click', function(){
+    document.querySelector('.hamburger span').classList.toggle('hamburger__active');
+  })
 
 
 
