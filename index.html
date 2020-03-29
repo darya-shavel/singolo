@@ -9,14 +9,24 @@
 <body>
     <div class="wrapper">
         <header class="header">
+            <span class="hamburger">
+                <span class="hamburger__line"></span>
+                <ul class="hamburger__navigation">
+                    <li><a class="hamburger__link" class="hamburger__active__link" href="#home">Home</a></li>
+                    <li><a class="hamburger__link"href="#service">Services</a></li>
+                    <li><a class="hamburger__link"href="#portfolio">Portfolio</a></li>
+                    <li><a class="hamburger__link"href="#about">About</a></li>
+                    <li><a class="hamburger__link"href="#contact">Contact</a></li>
+                </ul>
+            </span>
             <h1 class="header__logotype">Singolo</h1> 
             <nav class="header__navigation">
                 <ul class="navigation">
-                    <li class="navigation__item"><a class="navigation__link" class="active__link" href="#home">Home</a></li>
+                    <li class="navigation__item"><a class="navigation__link" class="active" href="#home">Home</a></li>
                     <li class="navigation__item"><a class="navigation__link"href="#service">Services</a></li>
                     <li class="navigation__item"><a class="navigation__link"href="#portfolio">Portfolio</a></li>
                     <li class="navigation__item"><a class="navigation__link"href="#about">About</a></li>
-                    <li class="navigation__item"><a class="navigation__link"href="#contact">Contact</a></li>
+                    <li class="navigation__item"><a class="navigation__link"href="#quote">Contact</a></li>
                 </ul>
             </nav>
         </header>
@@ -213,7 +223,7 @@
                     </div>
                 </div>
             </div>
-            <div class="quote">
+            <div class="quote" id="quote">
                 <p class="quote__topic">
                     Get a Quote
     
@@ -233,7 +243,7 @@
                             </button>
                         </form>  
                     </div>
-                    <div class="contact__information" id="contact">
+                    <div class="contact__information">
                         <p class="contact__topic">
                             Contact Information
                         </p>

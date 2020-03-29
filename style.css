@@ -64,9 +64,6 @@
 .header__navigation{
     margin-right: 40px;
 }
-.active__link{
-    color: #f06c64;
-}
 .navigation__item{
     justify-content: flex-end;
     margin-top: 8px;
@@ -95,6 +92,44 @@
 }
 .active {
     color: #f06c64;
+}
+.hamburger{
+    display: none;
+    position: relative;
+    width: 25px;
+    height: 25px;
+}
+.hamburger::before{
+    position: absolute ;
+    display: inline-block;
+    top: 0;
+    left: 0 ;
+    content: " ";
+    background: #ffffff;
+    border-radius: 5px;
+    height: 3px;
+    width: 100% ; 
+}
+.hamburger::after{
+    position: absolute ;
+    display: inline-block;
+    bottom: 0;
+    left: 0 ;
+    content: " ";
+    background: #ffffff;
+    border-radius: 5px;
+    height: 3px;
+    width: 100% ; 
+}
+.hamburger__line{
+    position: absolute ;
+    display: inline-block;
+    background: #ffffff;
+    border-radius: 5px;
+    height: 3px;
+    width: 100%;
+    top: calc(50% - 3px);
+    left: 0;
 }
 .slider{
     margin-bottom: 6px;
@@ -143,6 +178,7 @@
     z-index: 1;
 }
 .vertical__black{
+    max-width: 100%;
     position: absolute;
     left: 126px;
     top: 202px;
@@ -153,6 +189,7 @@
     height: 333px;
 }
 .horizontal__black{
+    max-width: 100%;
     position: absolute;
     left: 485px;
     top: 243px;
@@ -203,7 +240,7 @@
     border-bottom: 4px solid #ffffff;
 }
 .our-service{
-    margin-top: 0;
+    margin-top:0;
     width: 190px;
     height: 23px;
     color: #666d89;
@@ -216,8 +253,8 @@
     letter-spacing: 0.08px;
 }
 .service__paragraph{
-    width: 974px;
-    height: 50px;
+    width: 95.5%;
+    height: 5%;
     font-size: 18px;
     line-height: 30px;
     color: #767e9e;
@@ -542,15 +579,15 @@
     font-size: 18px;
     line-height: 30px;
     color: #f0d8d9;
-    width: 940px;
-    height: 57px;
+    width: 92.15%;
+    height: 5.6%;
     margin-left: 40px;
     margin-top: 27px;
     letter-spacing: -0.23px;
 }
 .submit{
-    width: 80px;
-    height: 36px;
+    width: 10.8%;
+    height: 3.6%;
     background-color: #ea676b;
     border: solid 1px #f0d8d9;
     border-radius: 5px;
@@ -684,7 +721,7 @@ textarea::placeholder{
     font-size: 12px;
     color: #666d89;
 }
-.message-block {
+.message-block{
     display: none;
     position: fixed;
     top: 0;
@@ -702,7 +739,7 @@ textarea::placeholder{
     top: 50%;
     left: 50%;
     width: 250px;
-    height: 120px;
+    height: 150px;
     border: 5px solid #d6564f;
     background-color: rgb(214, 125, 121);
 }
@@ -741,9 +778,15 @@ textarea::placeholder{
     .navigation{
         display: inline;
     }
+    .slider{
+        max-width: 100%;
+    }
+    .slider .item{
+        max-width: 100%;
+    }
     .vertical__phone{
-        width: 163px;
-        height: 345px;
+        width: 22.2%;
+        height: 48.9%;
         position: absolute;
         left: 13.85%;
         right: 65.62%;
@@ -751,8 +794,8 @@ textarea::placeholder{
         bottom: 10.5%;
     }
     .horizontal__phone{
-        width: 364px;
-        height: 182px;
+        width: 42.7%;
+        height: 23.7%;
         position: absolute;
         left: 43.54%;
         right: 11.11%;
@@ -777,13 +820,14 @@ textarea::placeholder{
         top: 52.82%;
     }
    .service__paragraph{
-        width: 92vw;
+        width: 90%;
    }
    #service{
        height: 100vh;
    }
    .flex__article>div{
        margin: calc((100% - 69vw)/6);
+       max-height: 100%;
    }
    .portfolio{
        height: 146vh;
@@ -794,6 +838,13 @@ textarea::placeholder{
        "a a a"
        "a a a"
        "a a a";
+       grid-gap: 10px;
+   }
+   .portfolio_item{
+       max-width: 100%;
+   }
+   .portfolio__paragraph{
+       max-width: 100%;
    }
    .about{
        width: 100vw;
@@ -844,13 +895,14 @@ textarea::placeholder{
 
 @media(max-width:375px){
     .wrapper{
-        width: 100vw;
+        width: 100%;
         height: 100%;
     }
     .navigation__item{
         display: none;
     }
     .vertical__phone{
+        max-width: 100%;
         width: 88.24px;
         height: 177.57px;
         position: absolute;
@@ -860,6 +912,7 @@ textarea::placeholder{
         bottom: 10.5%;
     }
     .slider{
+        max-width: 100%;
         height: 55vh;
     }
     .slider .prev{
@@ -867,12 +920,16 @@ textarea::placeholder{
         left: 0.3%;
         top: 62.82%;
     }
+    .slider .item{
+        max-width: 100%;
+    }
     .slider .next{
         position: absolute;
         left: 89%;
         top: 62.82%;
     }
     .horizontal__phone{
+        max-width: 100%;
         width: 177.57px;
         height: 88.24px;
         position: absolute;
@@ -880,6 +937,10 @@ textarea::placeholder{
         right: 11.11%;
         top: 54%;
         bottom: 30.5%;
+    }
+    .hamburger{
+        display: block;
+        margin-right: 20%;
     }
     .slider2__img{
         position: absolute;
@@ -895,9 +956,10 @@ textarea::placeholder{
         width: 82%;
         letter-spacing: 0;
         text-align: initial;
+        margin-bottom: 0%;
     }
-    .flex__article{
-        margin-top: 44%;
+    .flex__article>div{
+        margin: calc((35%-70vw)/6);
     }
     .portfolio{
         height: 111vh;
@@ -917,7 +979,7 @@ textarea::placeholder{
     .portfolio_item:nth-child(n+9) {
         display: none;
       }
-    #portfolio__paragraph{
+    .portfolio__paragraph{
         width: 100%;
     }
     .button__navigation{
@@ -954,12 +1016,15 @@ textarea::placeholder{
         text-align: start;
         letter-spacing: 0;
     }
-    form{
-        margin-top:10%;
+    .contact__form{
+        width: 100%;
     }
-    .forms__items,.forms__textarea{
-        width: 48%;
-        display: block;
+    .forms__items,
+    .forms__textarea{
+        width: 80%;
+    }
+    .name{
+        width: 100%;
     }
     .inputs__contact-inf {
         display: block;
@@ -974,8 +1039,7 @@ textarea::placeholder{
         margin-bottom: 0%;
     }
     .submit{
-        display: block;
-        width: 48%;
+        width: 80%;
         height: 50%;
         margin-bottom: 4%;
     }
@@ -985,153 +1049,7 @@ textarea::placeholder{
     .footer__copyright{
         display: none;
     }
-}
-
-
-
-@media(max-width:320px){
-    .wrapper{
-        width: 100vw;
-        height: 100%;
-    }
-    .navigation__item{
-        display: none;
-    }
-    .vertical__phone{
-        width: 88.24px;
-        height: 177.57px;
-        position: absolute;
-        left: 13.85%;
-        right: 65.62%;
-        top: 42%;
-        bottom: 10.5%;
-    }
-    .slider{
-        height: 55vh;
-    }
-    .slider .prev{
-        position: absolute;
-        left: 0.3%;
-        top: 62.82%;
-    }
-    .slider .next{
-        position: absolute;
-        left: 89%;
-        top: 62.82%;
-    }
-    .horizontal__phone{
-        width: 177.57px;
-        height: 88.24px;
-        position: absolute;
-        left: 41.54%;
-        right: 11.11%;
-        top: 54%;
-        bottom: 30.5%;
-    }
-    .slider2__img{
-        position: absolute;
-        left: 92px;
-        top: 165px;
-        width: 55%;
-        height: 48%;
-    }
-    #service{
-        height: 100%;
-    }
-    .service__paragraph{
-        width: 82%;
-        letter-spacing: 0;
-        text-align: initial;
-    }
-    .flex__article{
-        margin-top: 62%;
-    }
-    .portfolio{
-        height: 111vh;
-    }
-    .column__img{
-        grid-template-areas: 
-        "a a"
-        "a a"
-        "a a"
-        "a a";
-        grid-gap: 13px;
-        margin-right: 10%;
-    }
-    .portfolio_item{
-        width: 100%;
-    }
-    .portfolio_item:nth-child(n+9) {
-        display: none;
-      }
-    #portfolio__paragraph{
-        width: 100%;
-    }
-    .button__navigation{
-        margin-top: 25%;
-    }
-    .about{
-        height: 100%;
-    }
-    .about__paragraph{
-        width: 82%;
-    }
-    .people{
-        display: block;
-    }
-    .quote{
-        width: 100%;
-        height: 138vh;
-    }
-    .woman{
-        margin-top: 71%;
-    }
-    .woman, .man, .young__girl{
-        width: 100%;
-    }
-    .woman__photo, .man__photo, .young__photo{
-        max-width: 90%;
-        width: 314px;
-        height: 264px;
-    }
-    .woman__contact-item, .man__contact-item, .young__contact-item{
-        margin-top: 15%;
-    }
-    .quote__paragraph{
-        width: 84%;
-        text-align: start;
-        letter-spacing: 0;
-    }
-    form{
-        width: 89%;
-        margin-top:31%;
-    }
-    .forms__items,.forms__textarea{
-        width: 48%;
-        display: block;
-    }
-    .inputs__contact-inf {
-        display: block;
-        margin-top: 48%;
-    }
-    .contact__information{
-        margin-left: 41px;
-        margin-top: 5px;
-    }
-    .contact__paragraph{
-        width: 88%;
-        margin-bottom: 0%;
-    }
-    .submit{
-        display: block;
-        width: 48%;
-        height: 50%;
-        margin-bottom: 4%;
-    }
-    .footer ul{
-        margin-left: 80px;
-    }
-    .footer__copyright{
-        display: none;
+    .hamburger_open {
+        transform: rotate(90deg);
     }
 }

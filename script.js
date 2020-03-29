@@ -1,3 +1,4 @@
+
 //menu items
 let menu = document.querySelector('.navigation');
 menu.addEventListener('click' , (event) => {
@@ -6,25 +7,25 @@ menu.addEventListener('click' , (event) => {
 });
 
 //scroll
-/*
+
 document.addEventListener('scroll',onScroll);
 function onScroll(){
-    const curPos = window.scrollY;
-    const divs = document.querySelector('.wrapper main div');
-    const links = document.querySelectorAll('.navigation>a');
+    const curPos = window.scrollY ;
+    const divs = document.querySelectorAll('.main > div');
+    const links = document.querySelectorAll('.navigation a');
 
     divs.forEach((el)=>{
         if(el.offsetTop <= curPos && (el.offsetTop + el.offsetHeight)  > curPos ){
             links.forEach((a)=>{
-                a.classList.remove('active__link');
+                a.classList.remove('active');
                 if(el.getAttribute('id') === a.getAttribute('href').substring(1)) {
-                    a.classList.add('active__link');
+                    a.classList.add('active');
                 };
             });
         };
     });
 };
-*/
+
 //screen off
 let vertical = document.querySelector('.button__phone1');
 vertical.addEventListener('click', function(n){
@@ -119,6 +120,12 @@ closeButton.addEventListener('click', function(){
     document.querySelector('.message-block').querySelector('.result').innerText = '';
     document.querySelector('.message-block').classList.remove('message-active');
 });
+
+
+//hamburger
+
+const burger = document.querySelector('.hamburger');
+
 
 
 
